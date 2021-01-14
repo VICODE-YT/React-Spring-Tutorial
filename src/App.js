@@ -1,22 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import Estructura from './02 Estructura/Estructura';
+import Login from './03 Login/Login';
+
 
 function App() {
+
+  const [move,setMove] = useState(false);
+
+  const clickHandler= ()=>{
+    setMove((lastState)=>!lastState)
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <Estructura isMove={move} ></Estructura>
+
+        <button className="button" onClick={clickHandler}>Click</button>
+ */}
+      {/* <button className="button-action">Sign Up</button>
+      <input type="text" text={"asd"} placeholder="Email"></input>
+      <button className="button-toggle">Sign Up</button>
+ */}
+
+    <Login></Login>
+
       </header>
     </div>
   );
