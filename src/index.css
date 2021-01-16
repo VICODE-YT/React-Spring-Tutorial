@@ -123,3 +123,38 @@ h3{
   color: #FFF;
   font-weight: 500;
 }
+
+.list-container{
+  background-color: rgb(255, 255, 255);
+  padding:16px;
+  overflow: hidden;
+}
+
+.list-items{
+
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+.list-items > li:nth-child(1n+1) {
+  background-color: rgb(75, 221, 148);
+}
+.list-items > li:nth-child(2n+2) {
+  background-color: rgb(197, 75, 221);
+}
+.list-items > li:nth-child(3n+3) {
+  background-color: rgb(170, 221, 75);
+}
+
+.list-items>li{
+  width:150px;
+  height: 45px;
+  border-radius: 4px;
+  margin: 0;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+
+  margin: 16px 0;
+  box-shadow: 0 0 7px 1px rgb(138, 138, 138);
+}
