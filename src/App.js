@@ -1,16 +1,17 @@
-import React,{useState} from 'react'
-import Estructura from './02 Estructura/Estructura';
-import Login from './03 Login/Login';
-import Springs from './04 useSprings/Springs';
+import React, { useState } from "react";
+import Estructura from "./02 Estructura/Estructura";
+import Springs from "./04 useSprings/Springs";
+import Trail from "./05 useTrail/Trail";
+import TrailTable from "./05 useTrail/TrailTable";
+import Login from "./05 useTrail/Login";
+
 
 function App() {
+  const [move, setMove] = useState(false);
 
-  const [move,setMove] = useState(false);
-
-  const clickHandler= ()=>{
-    setMove((lastState)=>!lastState)
-  }
-
+  const clickHandler = () => {
+    setMove((lastState) => !lastState);
+  };
 
   return (
     <div className="App">
@@ -19,11 +20,15 @@ function App() {
 
        
  */}
-    <button className="button" onClick={clickHandler}>Click</button>
-    {/* <Login></Login> */}
+        <button className="button" onClick={clickHandler}>
+          Click
+        </button>
+        {/* <Login></Login> */}
 
-      <Springs isMove={move}></Springs>
-
+        {/*  <Springs isMove={move}></Springs> */}
+        {/* <Trail></Trail> */}
+        <TrailTable></TrailTable>
+        <Login></Login>
       </header>
     </div>
   );
