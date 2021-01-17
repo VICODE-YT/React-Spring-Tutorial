@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Estructura from "./02 Estructura/Estructura";
 import Springs from "./04 useSprings/Springs";
-import Trail from "./05 useTrail/Trail";
 import TrailTable from "./05 useTrail/TrailTable";
 import Login from "./05 useTrail/Login";
 

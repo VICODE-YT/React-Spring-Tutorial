@@ -22,9 +22,9 @@ export default function Login() {
     
     const animationFormMove = useSpring({
         from:{
-            transform: `translate(${!move?-100:0}%)`
+            transform: `translate(${!move?-100:0}%)`,opacity:'0'
         },
-        transform: `translate(${move?-100:0}%)`
+        transform: `translate(${move?-100:0}%)`,opacity:'1'
 
     })
 
@@ -33,15 +33,14 @@ export default function Login() {
           transform: `translateX(${!move ? -100 : 0}%)`,
         },
         transform: `translateX(${move ? -100 : 0}%)`,
-        config: { mass: 1, tension: 266, friction: 16,clamp:true },
 
       });
     
       const trailLogin = useTrail(3, {
         from: {
-          transform: `translateX(${!move ? 0 : 100}%)`,
-        },
-        transform: `translateX(${move ? 0 : 100}%)`,
+            transform: `translateX(${move ? 100 : 0}%)`,
+          },
+          transform: `translateX(${!move ? 100 : 0}%)`,
         
       });
 

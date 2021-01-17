@@ -30,10 +30,10 @@ export default function TrailTable() {
         <th>Phone</th>
       </tr>
       {trail &&
-        trail.map(({ ...obj }, index, arrayItSelf) => (
+        trail.map((obj, index, arrayItSelf) => (
           <RowPerson
-            key={obj}
-            animation={index >= indexStartRender ? { ...obj } : {}}
+            key={dataToShow[index]}
+            animation={index >= indexStartRender ?obj : {}}
             data={dataToShow[index]}
             click={(e) => clickHandler(e, index)}
           ></RowPerson>
